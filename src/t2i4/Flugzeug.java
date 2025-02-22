@@ -48,4 +48,9 @@ public class Flugzeug implements IFracht, IPassagier {
         gebuchtePassagiere -= n;
         return true;
     }
+
+    public void drucken(){
+        System.out.println("Gebuchte Passagiere: " + gebuchtePassagiere);
+        System.out.println("Gebuchte Fracht: " + gebuchteFracht);
+    }
 }
