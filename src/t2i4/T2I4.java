@@ -5,47 +5,63 @@ import java.util.Scanner;
 public class T2I4 {
     public static void main(String[] args) {
 
-        Flugzeug os12 = new Flugzeug("os12", 122, 40);
+        Flugzeug os1722 = new Flugzeug("os1722", 122, 40);
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Anzahl an Passagiere eingeben: ");
-        int p = in.nextInt();
 
-        //Passagiere Aufnehmen
-        if (os12.buchenPassagier(p)) {
-            System.out.println(p + " Passagier(e) gebucht.");
+        //Passagiere buchen
+        if (os1722.buchenPassagier(120)) {
+            System.out.println("120 Passagiere gebucht.");
         } else {
-            System.out.println(p + " Passagier(e) konnten nicht gebucht werden.");
+            System.out.println("120 Passagiere konnten nicht gebucht werden.");
         }
 
-        //Fracht Aufnehmen
-        System.out.println("Anzahl an Fracht in Tonnen eingeben: ");
-        int f = in.nextInt();
-
-        if (os12.buchenFracht(f)) {
-            System.out.println(f + " Tonne(n) Fracht gebucht.");
+        //Fracht buchen
+        if (os1722.buchenFracht(28)) {
+            System.out.println("28 Tonnen Fracht gebucht.");
         } else {
-            System.out.println(f + " Tonne(n) Fracht konnten nicht gebucht werden.");
+            System.out.println("28 Tonnen Fracht konnten nicht gebucht werden.");
         }
+
         //Passagiere stornieren
-        System.out.println("Anzahl an zu stornierenden Passagieren eingeben: ");
-        int pm = in.nextInt();
-        if (os12.stornierenPassagier(pm)) {
-            System.out.println(pm + " Passagier(e) storniert.");
+        if (os1722.stornierenPassagier(120)) {
+            System.out.println("110 Passagiere storniert.");
         } else {
-            System.out.println(pm + " Passagier(e) konnten nicht storniert werden.");
+            System.out.println("110 Passagiere konnten nicht storniert werden.");
         }
 
         //Fracht stornieren
-        System.out.println("Anzahl an zu stornierender Fracht eingeben: ");
-        int fm = in.nextInt();
-        in.close();
-        if (os12.stornierenFracht(fm)) {
-            System.out.println(fm + " Tonne(n) Fracht storniert.");
+        if (os1722.stornierenFracht(28)) {
+            System.out.println("10 Tonnen Fracht storniert.");
         } else {
-            System.out.println(fm + " Tonne(n) Fracht konnten nicht storniert werden.");
+            System.out.println("10 Tonnen Fracht konnten nicht storniert werden.");
         }
 
-        os12.drucken();
+        //Passagiere buchen (ungültig)
+        if (os1722.buchenPassagier(123)) {
+            System.out.println("123 Passagiere gebucht.");
+        } else {
+            System.out.println("123 Passagiere konnten nicht gebucht werden.");
+        }
+
+        //Fracht buchen (ungültig)
+        if (os1722.buchenFracht(41)) {
+            System.out.println("41 Tonnen Fracht gebucht.");
+        } else {
+            System.out.println("41 Tonnen Fracht konnten nicht gebucht werden.");
+        }
+
+        //Passagiere stornieren (ungültig)
+        if (os1722.stornierenPassagier(20)) {
+            System.out.println("20 Passagiere storniert.");
+        } else {
+            System.out.println("20 Passagiere konnten nicht storniert werden.");
+        }
+
+        //Fracht stornieren (ungültig)
+        if (os1722.stornierenFracht(20)) {
+            System.out.println("20 Tonnen Fracht storniert.");
+        } else {
+            System.out.println("20 Tonnen Fracht konnten nicht storniert werden.");
+        }
     }
 }

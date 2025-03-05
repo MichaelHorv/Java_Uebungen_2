@@ -49,8 +49,5 @@ public class Flugzeug implements IFracht, IPassagier {
         return true;
     }
 
-    public void drucken(){
-        System.out.println("Gebuchte Passagiere: " + gebuchtePassagiere);
-        System.out.println("Gebuchte Fracht: " + gebuchteFracht);
-    }
+    //Die Drucken-Methode wurde weggelassen, da diese nicht als Anforderung in der Unterlagen ersichtlich ist.
 }
