@@ -1,11 +1,21 @@
 package t2i4;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class T2I4 {
     public static void main(String[] args) {
 
         Flugzeug os1722 = new Flugzeug("os1722", 122, 40);
+        ArrayList<String> cars = new ArrayList<String>();
+
+        cars.add("Mustang");
+        cars.add("Corvette");
+        cars.add("M240i");
+        System.out.println(cars.getFirst());
+        System.out.println(cars.get(0));
+        System.out.println(cars.get(1));
+        System.out.println(cars.get(2));
 
 
         //Passagiere buchen

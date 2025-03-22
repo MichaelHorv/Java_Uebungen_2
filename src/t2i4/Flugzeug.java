@@ -1,5 +1,7 @@
 package t2i4;
 
+import java.util.ArrayList;
+
 public class Flugzeug implements IFracht, IPassagier {
     private String flugnummer;
     private int maxPassagiere;
