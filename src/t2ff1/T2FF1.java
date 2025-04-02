@@ -10,7 +10,7 @@ public class T2FF1 {
     public static void main(String[] args) {
         Path p = Path.of(".\\resources\\t2FF1.txt");
         List<String> lZahlen = new ArrayList<>();
-        for(int i = 1; i <= 5; i++){
+        for (int i = 1; i <= 5; i++) {
             lZahlen.add(Integer.toString(i));
         }
 
@@ -19,7 +19,7 @@ public class T2FF1 {
             List<String> lZeilen = Files.readAllLines(p); //Aus dem File lesen
             int summe = 0;
             int produkt = 1;
-            for(String eineZeile : lZeilen){
+            for (String eineZeile : lZeilen) {
                 int zahl = Integer.parseInt(eineZeile);
                 summe += zahl;
                 produkt *= zahl;
